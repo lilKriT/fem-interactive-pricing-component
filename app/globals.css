@@ -23,8 +23,24 @@
   --color-slate-400: hsl(225, 20%, 60%); /* Text */
   --color-slate-800: hsl(227, 35%, 25%); /* Text & CTA Background */
 
+  /* Semantic tokens / color aliases as opposed to primitive tokens */
   --color-background: var(--color-slate-50);
   --color-text: var(--color-slate-400);
+
+  --color-discount-background: var(--color-orange-100);
+  --color-discount-text: var(--color-orange-400);
+
+  --color-cta-background: var(--color-slate-800);
+  --color-cta-text: var(--color-indigo-200);
+
+  --color-pricing-background: var(--color-white);
+
+  --color-empty-slider-bar: var(--color-slate-200);
+  --color-toggle-background: var(--color-slate-300);
+}
+
+* {
+  /* @apply outline outline-blue-500; */
 }
 
 body {
