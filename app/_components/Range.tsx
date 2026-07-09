@@ -1,12 +1,27 @@
 "use client";
 
+import { useRef } from "react";
+
 const Range = () => {
-  const handleChange = () => {
+  const rangeRef = useRef<HTMLInputElement>(null);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const range = rangeRef.current;
+    if (!range) return;
+
+    const min = Number(range.min) || 0;
+    const max = Number(range.max) || 100;
+    const value = Number(e.target.value);
+
+    const percent = ((value - min) / (max - min)) * 100;
+
+    range.style.setProperty("--fill", `${percent}%`);
     console.log("change");
   };
 
   return (
     <input
+      ref={rangeRef}
       type="range"
       min={0}
       max={4}
