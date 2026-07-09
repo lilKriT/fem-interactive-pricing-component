@@ -41,7 +41,7 @@
 }
 
 * {
-  @apply outline outline-blue-500;
+  /* @apply outline outline-blue-500; */
 }
 
 body {
@@ -50,6 +50,58 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-size: var(--font-base);
+}
+
+/* Webkit */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    to right,
+    var(--color-green-100),
+    var(--color-green-100) var(--fill, 0%),
+    var(--color-empty-slider-bar) var(--fill, 0%),
+    var(--color-empty-slider-bar)
+  );
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background:
+    url("/icon-slider.svg") no-repeat center / 60%,
+    var(--color-green-400);
+  cursor: pointer;
+  transform: translateY(calc(-50% + 5px));
+
+  @apply shadow-[0px_10px_12px_hsla(174,77%,80%,90%)];
+}
+
+/* Mozilla */
+
+input[type="range"]::-moz-range-thumb {
+  appearance: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  border: 0px;
+  background:
+    url("/icon-slider.svg") no-repeat center / 60%,
+    var(--color-green-400);
+  cursor: pointer;
+  @apply shadow-[0px_10px_12px_hsla(174,77%,80%,90%)];
+}
+
+input[type="range"]::-moz-range-progress {
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(
+    to right,
+    var(--color-green-100),
+    var(--color-green-100)
+  );
 }
 
 .checkmarkList {
