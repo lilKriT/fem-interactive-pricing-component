@@ -2,12 +2,12 @@
 
 import { useRef } from "react";
 
-type RangeProps = {
+type ViewsPriceRangeProps = {
   tier: number;
   setTier: (value: number) => void;
 };
 
-const Range = ({ tier, setTier }: RangeProps) => {
+const ViewsPriceRange = ({ tier, setTier }: ViewsPriceRangeProps) => {
   const rangeRef = useRef<HTMLInputElement>(null);
 
   // This handles local change and sends data upwards
@@ -39,4 +39,4 @@ const Range = ({ tier, setTier }: RangeProps) => {
   );
 };
 
-export default Range;
+export default ViewsPriceRange;
