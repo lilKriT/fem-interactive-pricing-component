@@ -19,7 +19,7 @@
   /* White is for Pricing Component Background */
   --color-slate-50: hsl(230, 100%, 99%); /* Main Background */
   --color-slate-200: hsl(224, 65%, 95%); /* Empty Slider Bar */
-  --color-slate-300: hsl(hsl(223, 50%, 87%)); /* Toggle Background */
+  --color-slate-300: hsl(223, 50%, 87%); /* Toggle Background */
   --color-slate-400: hsl(225, 20%, 60%); /* Text */
   --color-slate-800: hsl(227, 35%, 25%); /* Text & CTA Background */
 
