@@ -2,9 +2,15 @@
 
 import { useRef } from "react";
 
-const Range = () => {
+type RangeProps = {
+  tier: number;
+  setTier: (value: number) => void;
+};
+
+const Range = ({ tier, setTier }: RangeProps) => {
   const rangeRef = useRef<HTMLInputElement>(null);
 
+  // This handles local change and sends data upwards
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const range = rangeRef.current;
     if (!range) return;
@@ -16,7 +22,8 @@ const Range = () => {
     const percent = ((value - min) / (max - min)) * 100;
 
     range.style.setProperty("--fill", `${percent}%`);
-    console.log("change");
+    // console.log("Current value: " + e.target.value);
+    setTier(Number(e.target.value));
   };
 
   return (

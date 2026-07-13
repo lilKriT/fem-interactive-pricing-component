@@ -2,27 +2,30 @@
 import { useState } from "react";
 import Range from "./Range";
 import Checkbox from "./Checkbox";
+import { pricingTiers } from "@/data/PricingTiers";
+import calculatePrice from "@/utils/calculatePrice";
 
 const PricingCalculator = () => {
   const [yearly, setYearly] = useState(true);
+  const [tier, setTier] = useState(2);
 
   return (
     <div className="flex flex-col justify-center items-center gap-12 p-12">
       {/* Top Row */}
       <div className="w-full flex justify-between items-center">
         <p className="uppercase font-extrabold tracking-[.15rem] text-lg">
-          100k Pageviews
+          {pricingTiers[tier].views} Pageviews
         </p>
         <p className="font-extrabold text-xl flex justify-center items-center gap-2">
           <span className="font-extrabold text-slate-800 text-5xl">
-            ${"16.00"}
+            ${calculatePrice(pricingTiers[tier].price, yearly ? 25 : 0)}
           </span>{" "}
           / month
         </p>
       </div>
 
       {/* Range */}
-      <Range />
+      <Range tier={tier} setTier={setTier} />
 
       {/* Bottom Row */}
       <div className="grid grid-cols-[1fr_auto_1fr] gap-8 font-extrabold">
