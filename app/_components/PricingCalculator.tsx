@@ -4,6 +4,7 @@ import ViewsPriceRange from "./ViewsPriceRange";
 import BillingCycleCheckbox from "./BillingCycleCheckbox";
 import { pricingTiers } from "@/data/PricingTiers";
 import calculatePrice from "@/utils/calculatePrice";
+import formatViews from "@/utils/formatViews";
 
 const PricingCalculator = () => {
   const [yearly, setYearly] = useState(true);
@@ -14,13 +15,13 @@ const PricingCalculator = () => {
       {/* Top Row */}
       <div className="w-full flex justify-between items-center">
         <p className="uppercase font-extrabold tracking-[.15rem] text-lg">
-          {pricingTiers[tier].views} Pageviews
+          {formatViews(pricingTiers[tier].views)} Pageviews
         </p>
         <p className="font-extrabold text-xl flex justify-center items-center gap-2">
           <span className="font-extrabold text-slate-800 text-5xl">
             ${calculatePrice(pricingTiers[tier].price, yearly ? 25 : 0)}
           </span>{" "}
-          / month
+          / {yearly ? "year" : "month"}
         </p>
       </div>
 
