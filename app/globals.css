@@ -96,11 +96,13 @@ input[type="range"]::-moz-range-thumb {
 }
 
 input[type="range"]::-moz-range-thumb:hover {
-  filter: brightness(1.2);
+  /* filter: brightness(1.2); */
+  background-color: hsl(174, 86%, 55%);
 }
 
 input[type="range"]::-moz-range-thumb:active {
-  filter: brightness(0.8);
+  /* filter: brightness(0.8); */
+  background-color: hsl(174, 86%, 35%);
 }
 
 input[type="range"]::-moz-range-progress {
