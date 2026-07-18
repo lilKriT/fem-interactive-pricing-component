@@ -92,6 +92,15 @@ input[type="range"]::-moz-range-thumb {
     var(--color-green-400);
   cursor: pointer;
   @apply shadow-[0px_10px_12px_hsla(174,77%,80%,90%)];
+  @apply motion-safe:duration-300;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  filter: brightness(1.2);
+}
+
+input[type="range"]::-moz-range-thumb:active {
+  filter: brightness(0.8);
 }
 
 input[type="range"]::-moz-range-progress {

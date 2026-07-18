@@ -16,7 +16,7 @@ const BillingCycleCheckbox = ({
         <p>Monthly Billing</p>
       </div>
 
-      <div className="relative w-12 h-6 bg-toggle-background motion-safe:duration-150 rounded-full peer-checked:w-20">
+      <div className="relative w-12 h-6 bg-toggle-background motion-safe:duration-150 rounded-full peer-checked:w-20 hover:bg-green-100">
         <form>
           <input
             autoComplete="off"

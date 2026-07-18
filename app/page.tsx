@@ -32,7 +32,7 @@ export default function Home() {
             <div className="flex justify-center items-center">
               <Link
                 href={"#"}
-                className="bg-cta-background text-cta-text rounded-full px-8 py-2 font-extrabold"
+                className="bg-cta-background text-cta-text rounded-full px-8 py-2 font-extrabold hover:text-white motion-safe:duration-300"
               >
                 Start my trial
               </Link>

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import ViewsPriceRange from "./ViewsPriceRange";
 import BillingCycleCheckbox from "./BillingCycleCheckbox";
-import { pricingTiers } from "@/data/PricingTiers";
+import { pricingTiers } from "@/data/pricingTiers";
 import calculatePrice from "@/utils/calculatePrice";
 import formatViews from "@/utils/formatViews";
 
