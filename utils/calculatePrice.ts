@@ -11,7 +11,7 @@ Here are the different page view ranges and the corresponding monthly price tota
 If the visitor switches the toggle to yearly billing, a 25% discount should be applied to all prices.
 */
 
-const calculatePrice = (value: number, discount: number) => {
+const calculatePrice = (value: number, discount: number): number => {
   return (value * (100 - discount)) / 100;
 };
 

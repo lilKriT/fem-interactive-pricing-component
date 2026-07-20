@@ -5,9 +5,14 @@ import { useRef } from "react";
 type ViewsPriceRangeProps = {
   tier: number;
   setTier: (value: number) => void;
+  className?: string;
 };
 
-const ViewsPriceRange = ({ tier, setTier }: ViewsPriceRangeProps) => {
+const ViewsPriceRange = ({
+  tier,
+  setTier,
+  className,
+}: ViewsPriceRangeProps) => {
   const rangeRef = useRef<HTMLInputElement>(null);
 
   // This handles local change and sends data upwards
@@ -33,7 +38,7 @@ const ViewsPriceRange = ({ tier, setTier }: ViewsPriceRangeProps) => {
       min={0}
       max={4}
       step={1}
-      className="w-full bg-empty-slider-bar rounded-lg appearance-none cursor-pointer h-3"
+      className={`w-full bg-empty-slider-bar rounded-lg appearance-none cursor-pointer h-3 ${className}`}
       onChange={handleChange}
     />
   );

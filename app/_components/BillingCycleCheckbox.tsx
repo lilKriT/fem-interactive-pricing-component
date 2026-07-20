@@ -10,7 +10,7 @@ const BillingCycleCheckbox = ({
   setYearly,
 }: BillingCycleCheckboxProps) => {
   return (
-    <label className="grid grid-cols-[1fr_auto_1fr] gap-8 font-extrabold cursor-pointer">
+    <label className="grid grid-cols-[1fr_auto_1fr] gap-4 md:gap-8 font-extrabold cursor-pointer text-center items-center">
       {/* Grid is probably the best way to center the button */}
       <div className="flex justify-end items-center">
         <p>Monthly Billing</p>

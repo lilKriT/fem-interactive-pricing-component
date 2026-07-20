@@ -22,15 +22,15 @@ export default function Home() {
           <PricingCalculator />
 
           {/* Sub-section */}
-          <div className="border-t border-slate-400/30 p-12 grid grid-cols-2 gap-8">
+          <div className="border-t border-slate-400/30 p-12 grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center md:justify-items-start">
             <div>
-              <ul className="list-image-[url(/icon-check.svg)] ml-4 checkmarkList flex flex-col gap-2">
+              <ul className="list-image-[url(/icon-check.svg)] ml-4 checkmarkList flex flex-col gap-2 items-center md:items-start">
                 <li>Unlimited websites</li>
                 <li>100% data ownership</li>
                 <li>Email reports</li>
               </ul>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center md:justify-self-center">
               <Link
                 href={"#"}
                 className="bg-cta-background text-cta-text rounded-full px-8 py-2 font-extrabold hover:text-white motion-safe:duration-300"
