@@ -13,7 +13,7 @@ const PricingCalculator = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-12 p-12">
       {/* Top Row */}
-      <div className="w-full grid grid-cols-1 justify-items-center gap-12 md:grid-cols-2 md:justify-items-stretch">
+      <div className="w-full grid grid-cols-1 justify-items-center gap-12 md:grid-cols-2 md:justify-items-stretch items-center">
         <p className="uppercase font-extrabold tracking-[.15rem] text-lg">
           {formatViews(pricingTiers[tier].views)} Pageviews
         </p>

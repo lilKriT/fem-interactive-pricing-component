@@ -38,6 +38,7 @@ const ViewsPriceRange = ({
       min={0}
       max={4}
       step={1}
+      aria-label="Select amount of views"
       className={`w-full bg-empty-slider-bar rounded-lg appearance-none cursor-pointer h-3 ${className}`}
       onChange={handleChange}
     />

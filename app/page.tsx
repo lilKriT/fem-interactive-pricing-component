@@ -17,7 +17,7 @@ export default function Home() {
         </div>
 
         {/* Card */}
-        <div className="max-w-3xl bg-pricing-background rounded-lg shadow-xl mx-12">
+        <div className="w-full max-w-3xl bg-pricing-background rounded-lg shadow-xl mx-12">
           {/* Pricing section */}
           <PricingCalculator />
 
